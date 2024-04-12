@@ -1,0 +1,10 @@
+PKG_LIBS = ./quickjs/libquickjs.a
+
+
+
+$(SHLIB): ./quickjs/libquickjs.a
+
+
+quickjs/libquickjs.a: quickjs/Makefile
+	cd quickjs && $(MAKE) libquickjs.a
+
