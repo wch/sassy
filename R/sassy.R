@@ -1,4 +1,6 @@
-#' @useDynLib sassy, .registration = TRUE
+#' @importFrom QuickJSR JSContext
 #' @export sass
-NULL
-
+sass <- function(filename) {
+  filecontent <- paste0(readLines(filename), collapse = "\n")
+  sass_ctx$call("exports.compileString", filecontent)$css
+}
