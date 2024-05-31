@@ -11,7 +11,7 @@ The steps below install the necessary packages and create the bundle in a tempor
 mkdir build && cd build
 npm install sass browserify
 
-echo "global.sass = require('sass');" > in.js
+echo "globalThis.sass = require('sass');" > in.js
 npx browserify in.js -o sass_bundle.js
 ```
 
