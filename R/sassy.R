@@ -1,6 +1,8 @@
 #' @importFrom QuickJSR JSContext
 #' @export sass
+#' @examples
+#' test_sass <- system.file("examples", "test.scss", package = "sassy")
+#' sass(test_sass)
 sass <- function(filename) {
-  filecontent <- paste0(readLines(filename), collapse = "\n")
-  sass_ctx$call("exports.compileString", filecontent)$css
+  sass_ctx$call("sassy", normalizePath(filename))
 }
