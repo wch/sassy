@@ -6,8 +6,8 @@ This package is a proof of concept for using the Dart Sass library compiled to J
 
 To install:
 
-```
-remotes::install_github("wch/sassy")
+```R
+remotes::install_github(c("andrjohns/QuickJSR", "wch/sassy"))
 ```
 
 To use:
